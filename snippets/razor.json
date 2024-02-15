@@ -1,0 +1,484 @@
+{
+  "Alert": {
+    "prefix": "mb-Alert",
+    "body": ["<MudAlert Severity=\"Severity.Normal\">Alert</MudAlert>"],
+    "description": "An alert is used to display an important message which is statically embedded in the page content."
+  },
+  "App Bar": {
+    "prefix": "mb-AppBar",
+    "body": [
+      "<MudAppBar Color=\"Color.Primary\" Fixed=\"false\">",
+      "    <MudIconButton Icon=\"@Icons.Material.Filled.Menu\" Color=\"Color.Inherit\" Edge=\"Edge.Start\" />",
+      "        <MudSpacer />",
+      "    <MudIconButton Icon=\"@Icons.Custom.Brands.GitHub\" Color=\"Color.Inherit\" />",
+      "</MudAppBar>"
+    ],
+    "description": "App bar is used to display actions, branding, navigation and screen titles. Keeping the app bar persistent while browsing different pages will ease navigation and access to actions for your users."
+  },
+  "Avatar": {
+    "prefix": "mb-Avatar",
+    "body": ["<MudAvatar Color=\"Color.Primary\"></MudAvatar>"],
+    "description": "The component is typically used to display circular user profile pictures, icons or text."
+  },
+  "Badge": {
+    "prefix": "mb-Badge",
+    "body": [
+      "<MudBadge Content=\"3\" Overlap=\"true\" Class=\"mx-6 my-4\">",
+      "    <MudIcon Icon=\"@Icons.Material.Filled.Email\" Color=\"Color.Default\" />",
+      "</MudBadge>]"
+    ],
+    "description": "A badge is a useful way to wrap or overlay an action button or icon with a simple notification, making it easy to emphasize things like the number of notifications received."
+  },
+  "Breadcrumb": {
+    "prefix": "mb-Breadcrumb",
+    "body": [
+      "<MudBreadcrumbs Items=\"_items\"></MudBreadcrumbs>",
+      "@code {",
+      "private List<BreadcrumbItem> _items = new List<BreadcrumbItem>",
+      "    {",
+      "    new BreadcrumbItem(\"Home\", href: \"#\"),",
+      "        new BreadcrumbItem(\"Link 1\", href: \"#\"),",
+      "        new BreadcrumbItem(\"Link 2\", href: null, disabled: true)",
+      "    };",
+      "}"
+    ],
+    "description": "A useful way to show the user\"s location."
+  },
+  "Button": {
+    "prefix": "mb-Button",
+    "body": ["<MudButton Variant=\"Variant.Filled\">Default</MudButton>"],
+    "description": "A Material Design Button for actions, links and commands. The Mudbutton component is a button with material design theme and comes with multiple functions. "
+  },
+  "Floating action button": {
+    "prefix": "mb-FloatingActionButton",
+    "body": [
+      "<MudFab Color=\"Color.Primary\" StartIcon=\"@Icons.Material.Filled.Add\" />"
+    ],
+    "description": "A floating action button (FAB)."
+  },
+  "Button Group": {
+    "prefix": "mb-ButtonGroup",
+    "body": [
+      "<MudButtonGroup Color=\"Color.Primary\" Variant=\"Variant.Outlined\">",
+      "    <MudButton>One</MudButton>",
+      "    <MudButton>Two</MudButton>",
+      "    <MudButton>Three</MudButton>",
+      "</MudButtonGroup>"
+    ],
+    "description": "The MudButtonGroup component can be used to group related MudButtons."
+  },
+  "Icon Button": {
+    "prefix": "mb-IconButton",
+    "body": [
+      "<MudIconButton Icon=\"@Icons.Material.Filled.Delete\" aria-label=\"delete\"></MudIconButton>"
+    ],
+    "description": "Similar to MudButton but with icons. For guidance and suggestions, go to Icons."
+  },
+  "Card": {
+    "prefix": "mb-Card",
+    "body": [
+      "<MudCard>",
+      "    <MudCardContent>",
+      "        <MudText>Story of the day</MudText>",
+      "        <MudText Typo=\"Typo.body2\">The quick, brown fox jumps over a lazy dog.</MudText>",
+      "    </MudCardContent>",
+      "    <MudCardActions>",
+      "        <MudButton Variant=\"Variant.Text\" Color=\"Color.Primary\">Learn More</MudButton>",
+      "    </MudCardActions>",
+      "</MudCard>"
+    ],
+    "description": "Cards can contain actions, text, or media like images or graphics. Keeping a card to a single subject keeps the design clean."
+  },
+  "Carousel": {
+    "prefix": "mb-Carousel",
+    "body": [
+      "<MudCarousel Class=\"mud-width-full\" ShowArrows=\"@arrows\" ShowBullets=\"@bullets\" EnableSwipeGesture=\"@enableSwipeGesture\" AutoCycle=\"@autocycle\" TData=\"object\">",
+      "    <MudCarouselItem Transition=\"transition\" Color=\"@Color.Primary\">",
+      "            <div class=\"d-flex\" style=\"height:100%\">",
+      "                    <MudIcon Class=\"mx-auto my-auto\" Icon=\"@Icons.Custom.Brands.MudBlazor\" Size=\"@Size.Large\" />",
+      "            </div>",
+      "    </MudCarouselItem>",
+      "    <MudCarouselItem Transition=\"transition\" Color=\"@Color.Secondary\">",
+      "            <div class=\"d-flex\" style=\"height:100%\">",
+      "                    <MudIcon Class=\"mx-auto my-auto\" Icon=\"@Icons.Custom.Brands.MudBlazor\" Size=\"@Size.Large\" />",
+      "            </div>",
+      "    </MudCarouselItem>",
+      "    <MudCarouselItem Transition=\"transition\">",
+      "            <div class=\"d-flex\" style=\"height:100%\">",
+      "                    <MudIcon Class=\"mx-auto my-auto\" Icon=\"@Icons.Custom.Brands.MudBlazor\" Color=\"@Color.Primary\" Size=\"@Size.Large\" />",
+      "            </div>",
+      "    </MudCarouselItem>",
+      "</MudCarousel>",
+      "",
+      "@code{",
+      "    private bool arrows = true;",
+      "    private bool bullets = true;",
+      "    private bool enableSwipeGesture = true;",
+      "    private bool autocycle = true;",
+      "    private Transition transition = Transition.Slide;",
+      "}"
+    ],
+    "description": "Similar to MudButton but with icons. For guidance and suggestions, go to Icons."
+  },
+  "Bar Chart": {
+    "prefix": "mb-BarChart",
+    "body": [
+      "<MudChart ChartType=\"ChartType.Bar\" ChartSeries=\"@Series\" XAxisLabels=\"@XAxisLabels\" Width=\"100%\" Height=\"350px\">",
+      "    <CustomGraphics>",
+      "        <style>",
+      "            .heavy { font: bold 30px Helvetica; }",
+      "            .Rrrrr { font: italic 40px Helvetica; fill: rgb(62,44,221); }",
+      "        </style>",
+      "        <text x=\"80\" y=\"35\" class=\"heavy\">I Love</text>",
+      "        <text x=\"105\" y=\"70\" class=\"Rrrrr\">MudBlazor!</text>",
+      "    </CustomGraphics>",
+      "</MudChart>",
+      "",
+      "@code {",
+      "    public List<ChartSeries> Series = new List<ChartSeries>()",
+      "    {",
+      "        new ChartSeries() { Name = \"United States\", Data = new double[] { 40, 20, 25, 27, 46, 60, 48, 80, 15 } },",
+      "        new ChartSeries() { Name = \"Germany\", Data = new double[] { 19, 24, 35, 13, 28, 15, 13, 16, 31 } },",
+      "        new ChartSeries() { Name = \"Sweden\", Data = new double[] { 8, 6, 11, 13, 4, 16, 10, 16, 18 } },",
+      "    };",
+      "    public string[] XAxisLabels = { \"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Jul\", \"Aug\", \"Sep\" };",
+      "}"
+    ],
+    "description": ""
+  },
+  "Donut Chart": {
+    "prefix": "mb-DonutChart",
+    "body": [
+      "<MudChart ChartType=\"ChartType.Donut\" Width=\"300px\" Height=\"300px\" InputData=\"@data\" InputLabels=\"@labels\">",
+      "    <CustomGraphics>",
+      "        <text class=\"donut-inner-text\" x=\"47%\" y=\"35%\" dominant-baseline=\"middle\" text-anchor=\"middle\" fill=\"black\" font-family=\"Helvetica\" font-size=\"2\">Total</text>",
+      "        <text class=\"donut-inner-text\" x=\"47%\" y=\"50%\" dominant-baseline=\"middle\" text-anchor=\"middle\" fill=\"black\" font-family=\"Helvetica\" font-size=\"5\">@data.Sum().ToString()</text>",
+      "    </CustomGraphics>",
+      "</MudChart>",
+      "",
+      "@code {",
+      "    public double[] data = { 25, 77, 28, 5 };",
+      "    public string[] labels = { \"Oil\", \"Coal\", \"Gas\", \"Biomass\" };",
+      "}"
+    ],
+    "description": ""
+  },
+  "Line Chart": {
+    "prefix": "mb-LineChart",
+    "body": [
+      "<div>",
+      "    <MudChart ChartType=\"ChartType.Line\" ChartSeries=\"@Series\" @bind-SelectedIndex=\"Index\" XAxisLabels=\"@XAxisLabels\" Width=\"100%\" Height=\"350px\"></MudChart>",
+      "    <MudButton @onclick=\"RandomizeData\">Randomize Data</MudButton>",
+      "    <MudText Typo=\"Typo.h6\">Selected portion of the chart: @Index</MudText>",
+      "</div>",
+      "",
+      "@code {",
+      "    private int Index = -1; //default value cannot be 0 -> first selectedindex is 0.",
+      "",
+      "    public List<ChartSeries> Series = new List<ChartSeries>()",
+      "    {",
+      "        new ChartSeries() { Name = \"Series 1\", Data = new double[] { 90, 79, 72, 69, 62, 62, 55, 65, 70 } },",
+      "        new ChartSeries() { Name = \"Series 2\", Data = new double[] { 10, 41, 35, 51, 49, 62, 69, 91, 148 } },",
+      "    };",
+      "    public string[] XAxisLabels = {\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Jul\", \"Aug\", \"Sep\" };",
+      "",
+      "    Random random = new Random();",
+      "    public void RandomizeData()",
+      "    {",
+      "        var new_series = new List<ChartSeries>()",
+      "        {",
+      "            new ChartSeries() { Name = \"Series 1\", Data = new double[9] },",
+      "            new ChartSeries() { Name = \"Series 2\", Data = new double[9] },",
+      "        };",
+      "        for (int i = 0; i < 9; i++)",
+      "        {",
+      "            new_series[0].Data[i] = random.NextDouble() * 100;",
+      "            new_series[1].Data[i] = random.NextDouble() * 100;",
+      "        }",
+      "        Series = new_series;",
+      "        StateHasChanged();",
+      "    }",
+      "}"
+    ],
+    "description": ""
+  },
+  "Pie Chart": {
+    "prefix": "mb-PieChart",
+    "body": [
+      "<MudPaper Class=\"pa-4\">",
+      "    <MudChart ChartType=\"ChartType.Pie\" InputData=\"@data\" @bind-SelectedIndex=\"Index\" InputLabels=\"@labels\" Width=\"300px\" Height=\"300px\" />",
+      "</MudPaper>",
+      "",
+      "@code {",
+      "    private int Index = -1; //default value cannot be 0 -> first selectedindex is 0.",
+      "    int dataSize = 4;",
+      "    double[] data = { 77, 25, 20, 5 };",
+      "    string[] labels = { \"Uranium\", \"Plutonium\", \"Thorium\", \"Caesium\", \"Technetium\", \"Promethium\",",
+      "                        \"Polonium\", \"Astatine\", \"Radon\", \"Francium\", \"Radium\", \"Actinium\", \"Protactinium\",",
+      "                        \"Neptunium\", \"Americium\", \"Curium\", \"Berkelium\", \"Californium\", \"Einsteinium\", \"Mudblaznium\" };",
+      "}"
+    ],
+    "description": ""
+  },
+  "Chip": {
+    "prefix": "mb-Chip",
+    "body": ["<MudChip>Default</MudChip>"],
+    "description": "Chips are compact elements that allow users to enter information, select a choice, filter content, or trigger an action.See also: ChipSet"
+  },
+  "Container": {
+    "prefix": "mb-Container",
+    "body": ["<MudContainer MaxWidth=\"MaxWidth.Small\"></MudContainer>"],
+    "description": "A simple component to center content. Choose between fluid or fixed."
+  },
+  "Data Grid": {
+    "prefix": "mb-DataGrid",
+    "body": [
+      "@using System.Net.Http.Json",
+      "@using MudBlazor.Examples.Data.Models",
+      "@inject HttpClient httpClient",
+      "",
+      "<MudDataGrid Items=\"@Elements.Take(4)\">",
+      "    <Columns>",
+      "        <PropertyColumn Property=\"x => x.Number\" Title=\"Nr\" />",
+      "        <PropertyColumn Property=\"x => x.Sign\" />",
+      "        <PropertyColumn Property=\"x => x.Name\" />",
+      "        <PropertyColumn Property=\"x => x.Position\" />",
+      "        <PropertyColumn Property=\"x => x.Molar\" Title=\"Molar mass\" />",
+      "    </Columns>",
+      "</MudDataGrid>",
+      "",
+      "@code {",
+      "    private IEnumerable<Element> Elements = new List<Element>();",
+      "",
+      "    protected override async Task OnInitializedAsync()",
+      "    {",
+      "        Elements = await httpClient.GetFromJsonAsync<List<Element>>(\"webapi/periodictable\");",
+      "    }",
+      "}"
+    ],
+    "description": "A sortable, filterable data grid with multiselection and pagination."
+  },
+  "Divider": {
+    "prefix": "mb-Divider",
+    "body": ["<MudDivider />"],
+    "description": "A divider is a thin line that groups content in lists and layouts."
+  },
+  "Drawer": {
+    "prefix": "mb-Drawer",
+    "body": [
+      "<MudButton Variant=\"Variant.Text\" OnClick=\"@(() => OpenDrawer(Anchor.Start))\">Start</MudButton>",
+      "<MudButton Variant=\"Variant.Text\" OnClick=\"@(() => OpenDrawer(Anchor.End))\">End</MudButton>",
+      "<MudButton Variant=\"Variant.Text\" OnClick=\"@(() => OpenDrawer(Anchor.Top))\">Top</MudButton>",
+      "<MudButton Variant=\"Variant.Text\" OnClick=\"@(() => OpenDrawer(Anchor.Bottom))\">Bottom</MudButton>",
+      "",
+      "<MudDrawer @bind-Open=\"@open\" Anchor=\"@anchor\" Elevation=\"1\" Variant=\"@DrawerVariant.Temporary\">",
+      "    <MudDrawerHeader>",
+      "        <MudText Typo=\"Typo.h6\">My App</MudText>",
+      "    </MudDrawerHeader>",
+      "    <MudNavMenu>",
+      "        <MudNavLink Match=\"NavLinkMatch.All\">Store</MudNavLink>",
+      "        <MudNavLink Match=\"NavLinkMatch.All\">Library</MudNavLink>",
+      "        <MudNavLink Match=\"NavLinkMatch.All\">Community</MudNavLink>",
+      "    </MudNavMenu>",
+      "</MudDrawer>",
+      "",
+      "@code{",
+      "    bool open;",
+      "    Anchor anchor;",
+      "    ",
+      "    void OpenDrawer(Anchor anchor)",
+      "    {",
+      "        open = true;",
+      "        this.anchor = anchor;",
+      "    }",
+      "}"
+    ],
+    "description": "Navigation Drawers provide access to destinations in your app."
+  },
+  "Drop Zone": {
+    "prefix": "mb-DropZone",
+    "body": [
+      "<MudDropContainer T=\"DropItem\" Items=\"_items\" ItemsSelector=\"@((item,dropzone) => item.Identifier == dropzone)\" ItemDropped=\"ItemUpdated\" Class=\"d-flex flex-wrap flex-grow-1\">",
+      "    <ChildContent>",
+      "        <MudDropZone T=\"DropItem\" Identifier=\"Drop Zone 1\" Class=\"rounded mud-background-gray pa-6 ma-8 flex-grow-1\">",
+      "            <MudText Typo=\"Typo.h6\" Class=\"mb-4\">Drop Zone 1</MudText>",
+      "         </MudDropZone>",
+      "        <MudDropZone T=\"DropItem\" Identifier=\"Drop Zone 2\" Class=\"rounded mud-background-gray pa-6 ma-8 flex-grow-1\">",
+      "            <MudText Typo=\"Typo.h6\" Class=\"mb-4\">Drop Zone 2</MudText>",
+      "        </MudDropZone>",
+      "    </ChildContent>",
+      "    <ItemRenderer>",
+      "        <MudPaper Elevation=\"25\" Class=\"pa-4 my-4\">@context.Name</MudPaper>",
+      "    </ItemRenderer>",
+      "</MudDropContainer>",
+      "",
+      "@code {",
+      "    private void ItemUpdated(MudItemDropInfo<DropItem> dropItem)",
+      "    {",
+      "        dropItem.Item.Identifier = dropItem.DropzoneIdentifier;",
+      "    }",
+      "    ",
+      "    private List<DropItem> _items = new()",
+      "    {",
+      "        new DropItem(){ Name = \"Drag me!\", Identifier = \"Drop Zone 1\" },",
+      "        new DropItem(){ Name = \"Or me!\", Identifier = \"Drop Zone 2\" },",
+      "        new DropItem(){ Name = \"Just Mud\", Identifier = \"Drop Zone 1\" },",
+      "    };",
+      "    ",
+      "    public class DropItem",
+      "    {",
+      "        public string Name { get; init; }",
+      "        public string Identifier { get; set; }",
+      "    }",
+      "}"
+    ],
+    "description": "Drag and Drop."
+  },
+  "Expansion Panels": {
+    "prefix": "mb-ExpansionPanels",
+    "body": [
+      "<MudExpansionPanels>",
+      "    <MudExpansionPanel Text=\"Panel One\" MaxHeight=\"150\">",
+      "        Panel One Content",
+      "    </MudExpansionPanel>",
+      "    <MudExpansionPanel Text=\"Panel Two\" MaxHeight=\"500\">",
+      "        Panel Two Content",
+      "    </MudExpansionPanel>",
+      "</MudExpansionPanels>"
+    ],
+    "description": ""
+  },
+  "Autocomplete": {
+    "prefix": "mb-Autocomplete",
+    "body": [
+      "<MudItem xs=\"12\" sm=\"6\" md=\"4\">",
+      "    <MudAutocomplete T=\"string\" Label=\"US States\" @bind-Value=\"value1\" SearchFunc=\"@Search1\"",
+      "                     ResetValueOnEmptyText=\"@resetValueOnEmptyText\"",
+      "                     CoerceText=\"@coerceText\" CoerceValue=\"@coerceValue\" />",
+      "</MudItem>",
+      "",
+      "@code {",
+      "    private bool resetValueOnEmptyText = true;",
+      "    private bool coerceText = true;",
+      "    private bool coerceValue = true;",
+      "    private string value1;",
+      "    private string[] states =",
+      "    {",
+      "        \"Alabama\", \"Alaska\"",
+      "    };",
+      "",
+      "    private async Task<IEnumerable<string>> Search1(string value)",
+      "    {",
+      "        await Task.Delay(5);",
+      "",
+      "        if (string.IsNullOrEmpty(value))",
+      "            return states;",
+      "        return states.Where(x => x.Contains(value, StringComparison.InvariantCultureIgnoreCase));",
+      "    }",
+      "}"
+    ],
+    "description": "The Autocomplete component offers simple and flexible type-ahead functionality. It is great for searching a value from a long list of options. In comparison to a Select, the Autocomplete doesn't need to know the complete item list, it only calls a search function which will return matching items. The search function can even run asynchronously, i.e. for database queries."
+  },
+  "Checkbox": {
+    "prefix": "mb-Checkbox",
+    "body": [
+      "<MudCheckbox Label=\"Checkbox\" @bind-Checked=\"@checked\" />",
+      "",
+      "@code {",
+      "    private bool @checked = true;",
+      "}"
+    ],
+    "description": "Checkboxes are a great way to allow the user to make a selection of choices from things like a list. If you want to let the user turn a setting on or off on demand, a Switch component is recommended instead."
+  },
+  "Field": {
+    "prefix": "mb-Field",
+    "body": ["<MudField Label=\"Field\" />"],
+    "description": "A component that inherits the same look and behaviour as Textfield. It has no input, but you can add your own content."
+  },
+  "Numeric Field": {
+    "prefix": "mb-NumericField",
+    "body": [
+      "<MudNumericField Label=\"Numeric Field\" @bind-Value=\"@value\" />",
+      "",
+      "@code {",
+      "    private int value = 5;",
+      "}"
+    ],
+    "description": "Numeric field components are used for receiving user provided numbers."
+  },
+  "Radio": {
+    "prefix": "mb-Radio",
+    "body": ["<MudRadioGroup Label=\"Radio\">"],
+    "description": "Radio buttons allow the user to select a single choice from a group of options."
+  },
+  "Slider": {
+    "prefix": "mb-Slider",
+    "body": [
+      "<MudSlider Label=\"Slider\" @bind-Value=\"@value\" />",
+      "",
+      "@code {",
+      "    private double value = 5;",
+      "}"
+    ],
+    "description": "Sliders allow users to make selections from a range of values."
+  },
+  "Switch": {
+    "prefix": "mb-Switch",
+    "body": [
+      "<MudSwitch Label=\"Switch\" @bind-Checked=\"@checked\" />",
+      "",
+      "@code {",
+      "    private bool @checked = true;",
+      "}"
+    ],
+    "description": "Similar to a checkbox but visually different, the switch lets the user switch between two values with the tap of a button."
+  },
+  "Text Field": {
+    "prefix": "mb-TextField",
+    "body": [
+      "<MudTextField Label=\"Text Field\" @bind-Value=\"@value\" />",
+      "",
+      "@code {",
+      "    private string value = { get; set; }",
+      "}"
+    ],
+    "description": "Text field components are used for receiving user provided information."
+  },
+  "Image": {
+    "prefix": "mb-Image",
+    "body": ["<MudImage Src=\"\" />"],
+    "description": "A simple component that represent the HTML img tag."
+  },
+  "Link": {
+    "prefix": "mb-Link",
+    "body": ["<MudLink Href=\"\" />"],
+    "description": "A simple component that represent the HTML a tag."
+  },
+  "Pagination": {
+    "prefix": "mb-Pagination",
+    "body": [
+      "<MudPagination Color=\"Color.Primary\" Count=\"4\" @bind-Selected=\"@_selected\"/>",
+      "",
+      "@code {",
+      "    private int _selected = 1;",
+      "}"
+    ],
+    "description": "This component allows the user to select a specific page from a range of pages."
+  },
+  "Date Picker": {
+    "prefix": "mb-DatePicker",
+    "body": [
+      "<MudDatePicker Label=\"Date Picker\" @bind-Date=\"@date\" />",
+      "",
+      "@code {",
+      "    DateTime? date = DateTime.Today;",
+      "}"
+    ],
+    "description": "Provides the user with a simple way to select a date."
+  },
+  "Progress": {
+    "prefix": "mb-Progress",
+    "body": ["<MudProgress />"],
+    "description": "Progress indicators that either show the length of a process or unspecified wait time, also known as indeterminate state. The animation is done with SVGs and CSS."
+  }
+}

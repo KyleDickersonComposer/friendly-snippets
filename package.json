@@ -230,6 +230,12 @@
                 "path": "./snippets/html.json"
             },
             {
+                "language": [
+                    "razor"
+                ],
+                "path": "./snippets/razor.json"
+            },
+            {
                 "language": ["css", "scss", "sass", "less", "stylus"],
                 "path": "./snippets/css.json"
             },
